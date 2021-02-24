@@ -97,7 +97,8 @@ Install libraries to run the code. In a terminal run the following commands:
 `pip install joblib`<br>
 `pip install scikit-learn`<br>
 `pip install jupyterlab`<br>
-`pip install torch torchvision torchaudio`<br>
+`pip install torch torchvision torchaudio`
+
 -----------------------------------------------------------------------
 ## Installation
 1. Clone the project by running the following command in a terminal:<br>
