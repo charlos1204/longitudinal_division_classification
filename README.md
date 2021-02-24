@@ -30,7 +30,7 @@ The following libraries can be install with miniconda or pip.
 
 ## Installation
 #### 1. Git for cloning the project (optional)
-* To install git in Debian based distribution (Ubuntu):
+* To install git in Debian based distribution (Ubuntu):<br>
 `
 $ sudo apt install git-all
 ` 
