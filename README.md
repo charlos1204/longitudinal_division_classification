@@ -43,7 +43,7 @@ $ sudo apt install git-all
 #### 3. Docker for running the container (optional)
 Only for running the Docker image of the code.
 * to install Docker in Debian based distribution (Ubuntu):
-`sudo apt update`
+`sudo apt update`<br>
 `sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common`
 `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
 `sudo apt-key fingerprint 0EBFCD88`
