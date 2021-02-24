@@ -14,4 +14,6 @@ The following will gide you to install Python 3.6 in an Ubuntu system, however, 
 5. Install with make<br>
 `make altinstall`
 6. Check Python version.<br>
-`python --version` or `python3 --version`
+`python --version`<br> 
+or<br>
+`python3 --version`
