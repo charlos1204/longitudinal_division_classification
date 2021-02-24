@@ -85,6 +85,7 @@ If the out put is: `Python 3.6.x` or higher you have the right version to run th
 * To install `Python 3.6` in Windows 10 download the binary from [here](https://www.python.org/ftp/python/3.6.8/python-3.6.8-amd64.exe). Double-click the .exe file and follow the instructions on the screen.
 * To install `Python 3.6` in macOS download the binary from [here](https://www.python.org/ftp/python/3.6.8/python-3.6.8-macosx10.9.pkg), follow the instructions on the screen.
 
+
 Install libraries to run the code. In a terminal run the following commands:
 `pip install cython`<br>
 `pip install opencv-python`<br>
