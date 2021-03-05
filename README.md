@@ -138,5 +138,3 @@ No se que rollo con esto
 ## Authors
 Todos los autores del paper
 
-## License
-MIT??

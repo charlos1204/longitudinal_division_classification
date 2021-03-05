@@ -5,10 +5,18 @@ import time
 import copy
 from tqdm.auto import tqdm
 import torch
+import pickle
 
 
 def imshow(inp, title=None):
-    """Imshow for Tensor."""
+    """
+    Imshow for Tensor.
+    plots the tensor as image
+
+    inp: input tensor
+    title: title to the plot
+    """
+
     inp = inp.numpy().transpose((1, 2, 0))
     mean = np.array([0.485, 0.456, 0.406])
     std = np.array([0.229, 0.224, 0.225])
@@ -21,10 +29,25 @@ def imshow(inp, title=None):
 
 
 def train_model(model, criterion, optimizer, scheduler, dataloaders, dataset_sizes, device, num_epochs=25):
+    """
+      train_model:
+                 model: defined model (Resnet18)
+                 criterion: cross entropy loss function
+                 optimizer: optimization algorithm Stochastic Gradient Descent (SGD)
+                 scheduler: decay LR by a factor
+                 dataloaders: batch of images, 8 images per batch
+                 dataset_sizes: size of train and val samples
+                 device: GPU or CPU
+                 num_epochs: number of epochs to train in the data
+    """
+
     since = time.time()
 
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
+
+    losses = []
+    accs = []
 
     for epoch in tqdm(range(num_epochs)):
         print('Epoch {}/{}'.format(epoch, num_epochs - 1))
@@ -69,6 +92,9 @@ def train_model(model, criterion, optimizer, scheduler, dataloaders, dataset_siz
             epoch_loss = running_loss / dataset_sizes[phase]
             epoch_acc = running_corrects.double() / dataset_sizes[phase]
 
+            losses.append((phase,epoch_loss))
+            accs.append((phase,epoch_acc.data.item()))
+
             print('{} Loss: {:.4f} Acc: {:.4f}'.format(
                 phase, epoch_loss, epoch_acc))
 
@@ -80,9 +106,11 @@ def train_model(model, criterion, optimizer, scheduler, dataloaders, dataset_siz
         print()
 
     time_elapsed = time.time() - since
-    print('Training complete in {:.0f}m {:.0f}s'.format(
-        time_elapsed // 60, time_elapsed % 60))
+    print('Training complete in {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60))
     print('Best val Acc: {:4f}'.format(best_acc))
+
+    pickle.dump(losses, open("model/losses.pkl", 'wb'), protocol=4)
+    pickle.dump(accs, open("model/accs.pkl", 'wb'), protocol=4)
 
     # load best model weights
     model.load_state_dict(best_model_wts)
@@ -90,6 +118,15 @@ def train_model(model, criterion, optimizer, scheduler, dataloaders, dataset_siz
 
 
 def visualize_model(model, device, dataloaders, num_images=6, ds='val'):
+    """
+    Plots to plot as image n number of tensors
+
+    model: trained model
+    device: GPU or CPU
+    dataloaders: batch of images
+    num_images: images to plot
+    ds: type of dataset (train, val or test)
+    """
     was_training = model.training
     model.eval()
     images_so_far = 0
@@ -116,8 +153,18 @@ def visualize_model(model, device, dataloaders, num_images=6, ds='val'):
         model.train(mode=was_training)
 
 
-def test_model(model, criterion, device, dataloaders, dataset_sizes):
-    phase = 'test'
+def test_model(model, criterion, device, dataloaders, dataset_sizes, phase):
+    """
+    Function to evaluate the model with a test dataset.
+
+	model: trained model
+    criterion: cross entropy loss function
+    device: GPU or CPU
+    dataloaders: batch of images
+    dataset_sizes: size of val or test samples
+    phase: type of dataset (val or test)
+    """
+
     model.eval()  # Set model to evaluate mode
     running_loss = 0.0
     running_corrects = 0
