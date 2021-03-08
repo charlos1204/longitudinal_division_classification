@@ -134,7 +134,7 @@ Each folder contain two subfolders:
 1. with jupyter notebook in a terminal:<br>
 `jupyter notebook Longitudinl_classification.ipynb`<br>
 run the last cell with the prediction function
-2. With docker<br>
+2. With docker<br>git push origin main
 `docker run -ti -v $PWD:/workspace/ longdiv_gpu python3.6 /workspace/predict.py`
 
 ## Contributing
@@ -144,10 +144,10 @@ We thank Philipp M. Weber, from the University of Vienna for providing the micro
 0.1
 
 ## Authors
-**Deep Learning code:**
+**Deep Learning code:**<br>
 Carlos Garcia, Keiichi Ito, Roman Feldbauer Javier Geijo and Wolfgang zu Castell
 
-**Sample extraction code:**
+**Sample extraction code:**<br>
 Nico Schreiber
 
 ## License
