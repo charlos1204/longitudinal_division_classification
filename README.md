@@ -124,17 +124,34 @@ Each folder contain two subfolders:
 ## Run a training for longitudinal division classification
 1. Run the jupyter notebook in a terminal:<br>
 `jupyter notebook Longitudinl_classification.ipynb`
-2. with docker<br>
-`docker run `
+2. With docker<br>
+`docker pull charlos1204/ldbc:gpu`<br>
+`docker run -ti -v $PWD:/workspace/ longdiv_gpu python3.6 /workspace/train_model.py`
 
 **Notes: train_functions_sgd.py code contains all functions that are called in the main function. Do not remove or delete this file.**
 
+## Prediction example:
+1. with jupyter notebook in a terminal:<br>
+`jupyter notebook Longitudinl_classification.ipynb`<br>
+run the last cell with the prediction function
+2. With docker<br>
+`docker run -ti -v $PWD:/workspace/ longdiv_gpu python3.6 /workspace/predict.py`
+
 ## Contributing
-Aqui va los nombres de los que no fueron autores como por ejemplo a la chica y philip
+We thank Philipp M. Weber, from the University of Vienna for providing the microscopic images, and Gabriela F. Paredes for her comments and insights on the review of the manuscript.
 
 ## Versioning
-No se que rollo con esto
+0.1
 
 ## Authors
-Todos los autores del paper
+**Deep Learning code:**
+Carlos Garcia, Keiichi Ito, Roman Feldbauer Javier Geijo and Wolfgang zu Castell
+
+**Sample extraction code:**
+Nico Schreiber
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
 

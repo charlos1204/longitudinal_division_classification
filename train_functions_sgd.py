@@ -35,7 +35,7 @@ def train_model(model, criterion, optimizer, scheduler, dataloaders, dataset_siz
                  criterion: cross entropy loss function
                  optimizer: optimization algorithm Stochastic Gradient Descent (SGD)
                  scheduler: decay LR by a factor
-                 dataloaders: batch of images, 8 images per batch
+                 dataloaders: batch of images, 16 images per batch
                  dataset_sizes: size of train and val samples
                  device: GPU or CPU
                  num_epochs: number of epochs to train in the data
