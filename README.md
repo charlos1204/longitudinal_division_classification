@@ -1,7 +1,7 @@
 # Efficient detection of longitudinal bacteria fission using transfer learning in Deep Neural Networks
 
-## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for testing purposes.
+Deep learning based approach to predict longitudinal bacteria fission.<br>
+The project train a binary classifier to predict the type of division on bacteria.
 
 ### Prerequisites
 * git (optional, https://git-scm.com/)
@@ -9,6 +9,36 @@ These instructions will get you a copy of the project up and running on your loc
 * cuda version 10 or higher (https://developer.nvidia.com/cuda-10.0-download-archive)
 * Docker (optional, https://docs.docker.com/get-docker/)
 * GPU
+
+## Quick and easy to use (Docker Optional).
+These instructions will get you running a traning, testing and prediction of the current project.<br>
+The easiest way to run the project is trough docker image. Follow the instructions [here](docker.md) to install Docker in your local machine.<br>
+
+* Download the image from Docker Hub.<br>
+In a terminal copy and paste the following line:<br>
+`docker pull charlos1204/ldbc:gpu`
+
+* Run image in bash mode.<br>
+In a temrinal copy and paste the line:<br>
+`docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu bash`<br>
+With this option you will get a shell terminal where you can run the training, testing or predicting. The code is inside of workspace dictory.<br>
+Where $PWD is the current directory
+for training `python train_model.py current`
+
+#run training
+#sudo docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python train_model.py current/model
+
+#run test
+#sudo docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python test_model.py current/model
+
+#run a prediction
+#sudo docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python predict_class.py current/model
+
+
+
+
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for testing purposes.
 
 The following libraries can be install with miniconda or pip.
 * miniconda (optional, https://docs.conda.io/en/latest/miniconda.html)
@@ -35,21 +65,7 @@ The following libraries can be install with miniconda or pip.
 #### 2. Nvidia driver and cuda for the GPU card
 * To install Nvidia driver for Linux, macOS, or Widnows will depend on the card you have, you can check the steps [here](https://www.nvidia.com/Download/index.aspx?lang=en-us), and for the cuda library [here](https://developer.nvidia.com/cuda-10.0-download-archive), we recommend asking your IT administrator for help.
 
-#### 3. Docker for running the container (optional)
-Only for running the Docker image of the code.
-* to install Docker in Debian based distribution (Ubuntu):<br>
-`sudo apt update`<br>
-`sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common`<br>
-`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`<br>
-`sudo apt-key fingerprint 0EBFCD88`<br>
-`sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`<br>
-`sudo apt-get update`<br>
-`sudo apt-get install docker-ce docker-ce-cli containerd.io`
-* To install Docker in Windows 10 follow the steps [here](https://docs.docker.com/docker-for-windows/install/)
-* To install Docker in macOS follow the steps [here](https://docs.docker.com/docker-for-mac/install/)
 
-Run this example in a terminal to make sure Docker is installed correctly:<br>
-`sudo docker run hello-world`
 
 ## Deep learning libraries
 The easiest way to install python and the libraries to run the code is through miniconda. Nevertheles, linux distributions already have python and pip installed. Pip is the package installer for python. If you prefer try with miniconda, follow the step 4. Otherwise skip to step 5 to use pip.
@@ -122,9 +138,7 @@ Each folder contain two subfolders:
 ## Run a training for longitudinal division classification
 1. Run the jupyter notebook in a terminal:<br>
 `jupyter notebook Longitudinl_classification.ipynb`
-2. With docker<br>
-`docker pull charlos1204/ldbc:gpu`<br>
-`docker run -ti -v $PWD:/workspace/ longdiv_gpu python3.6 /workspace/train_model.py`
+
 
 **Notes: train_functions_sgd.py code contains all functions that are called in the main function. Do not remove or delete this file.**
 
