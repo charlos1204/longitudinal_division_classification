@@ -13,4 +13,7 @@ Only for running the Docker image of the code.
 * To install Docker in macOS follow the steps [here](https://docs.docker.com/docker-for-mac/install/)
 
 Run this example in a terminal to make sure Docker is installed correctly:<br>
-`sudo docker run hello-world`
+`docker run hello-world`
+
+**NOTE**<br>
+In linux you have to add sudo before docker!

@@ -12,17 +12,18 @@ The project train a binary classifier to predict the type of division on bacteri
 
 ## Quick to use (Docker Optional).
 These instructions will get you running a traning, testing and prediction of the current project.<br>
-The easiest way to run the project is trough docker image. Follow the instructions [here](docker.md) to install Docker in your local machine.<br>
+The easiest way to run the project is trough a docker image. Follow the instructions [here](docker.md) to install Docker in your local machine.<br>
 
 * Download the image from Docker Hub. In a terminal copy and paste the following line:<br>
 `docker pull charlos1204/ldbc:gpu`
 
-* The only parameter to pass to the code is the folder to use current or model:
-1. current: is the terminal were you are running docker and were the output will be saved.
-2. model: internal folder were the trained model is. If you run a new training selection this folder the current trained model will be replace.
+* The only parameter to pass to the code is the text "current" or "model":
+   1. current: is the terminal were you are running docker and were the output will be saved.
+   2. model: internal folder were the trained model is. If you run a new training selection this folder the current trained model will be replace.
 
 * Run a training and get the trained model from the docker image:<br>
-**$PWD** is the current directory (linux/macOS). For Windows replace with (include quotes): "C:\path to the project folder\"<br>
+**$PWD** is the current directory (linux/macOS). For Windows replace with (include quotes):<br>
+"C:\path to the project folder\"<br>
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python train_model.py current`
 * Run a test to see how good the model generalize with unseen images:<br>
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python test_model.py current`
@@ -30,6 +31,7 @@ The easiest way to run the project is trough docker image. Follow the instructio
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python predict_class.py current/model`
 
 There is a possibility to enter into a bash mode and modify the code inside to play with it. However, once you quit the bash all modifications will be lost. Therefore, we recommend to use the jupyter notebook to keep all modifications.
+
 Run image in bash mode.<br>
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu bash`<br>
 With this option you will get a shell terminal where you can run the training, testing or predicting. The code is inside of workspace dictory. **$PWD** is the current directory.<br>
