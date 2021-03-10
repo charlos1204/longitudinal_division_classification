@@ -133,9 +133,9 @@ Each folder contain two subfolders:
 ## Prediction example:
 1. with jupyter notebook in a terminal:<br>
 `jupyter notebook Longitudinl_classification.ipynb`<br>
-run the last cell with the prediction function
+run the cell with the prediction example
 2. With docker:<br>
-`docker run -ti -v $PWD:/workspace/ longdiv_gpu python3.6 /workspace/predict.py`
+`docker run -ti -v $PWD:/workspace/ longdiv_gpu python3.6 /workspace/predict_class.py`
 
 ## Contributing
 We thank Philipp M. Weber, from the University of Vienna for providing the microscopic images, and Gabriela F. Paredes for her comments and insights on the review of the manuscript.
@@ -148,7 +148,8 @@ We thank Philipp M. Weber, from the University of Vienna for providing the micro
 Carlos Garcia, Keiichi Ito, Roman Feldbauer Javier Geijo and Wolfgang zu Castell
 
 **Sample extraction code:**<br>
-Nico Schreiber
+Nico Schreiber.<br>
+**In process to be published. Available only upon request.**
 
 ## License
 
