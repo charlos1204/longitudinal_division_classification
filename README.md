@@ -1,7 +1,5 @@
 # Efficient detection of longitudinal bacteria fission using transfer learning in Deep Neural Networks
 
-One Paragraph of project description goes here
-
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for testing purposes.
 
