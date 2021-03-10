@@ -10,7 +10,7 @@ The project train a binary classifier to predict the type of division on bacteri
 * Docker (optional, https://docs.docker.com/get-docker/)
 * GPU
 
-## Quick to use (Docker Optional).
+## Quick to use (Docker Optional)
 These instructions will get you running a traning, testing and prediction of the current project.<br>
 The easiest way to run the project is trough a docker image. Follow the instructions [here](docker.md) to install Docker in your local machine.<br>
 
@@ -42,7 +42,6 @@ With this option you will get a shell terminal where you can run the training, t
 * Running a prediction with parameter model:<br>
 `python predict_class.py model`
 
-
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for testing purposes.
 
@@ -71,12 +70,10 @@ The following libraries can be install with miniconda or pip.
 #### 2. Nvidia driver and cuda for the GPU card
 * To install Nvidia driver for Linux, macOS, or Widnows will depend on the card you have, you can check the steps [here](https://www.nvidia.com/Download/index.aspx?lang=en-us), and for the cuda library [here](https://developer.nvidia.com/cuda-10.0-download-archive), we recommend asking your IT administrator for help.
 
-
-
 ## Deep learning libraries
 The easiest way to install python and the libraries to run the code is through miniconda. Nevertheles, linux distributions already have python and pip installed. Pip is the package installer for python. If you prefer try with miniconda, follow the step 4. Otherwise skip to step 5 to use pip.
 
-#### 4. Install libraries with miniconda
+#### 3. Install libraries with miniconda
 miniconda is a minimal installer for conda. conda includes the most recent python version and provides a way to install packages, such as the packages needed to do machine learning or deep learning.
 * First download the miniconda installer from [here](https://docs.conda.io/en/latest/miniconda.html#linux-installers) depending on your operating system.
 * For linux run the following command:<br>
@@ -98,7 +95,7 @@ Install libraries to run the code. In a terminal run the following commands:<br>
 `conda install -c anaconda scikit-learn`<br>
 `conda install -c conda-forge jupyterlab`<br>
 
-#### 5. Install libraries with pip
+#### 4. Install libraries with pip
 * Linux (Ubuntu): In a terminal type the following command to check the python version installed in your operating system (most linux flavors will run the command):<br>
 `python --version` or `$ python3 --version`
 If the out put is: `Python 3.6.x` or higher you have the right version to run the code, follow the next step. Otherwise, install at least `Python 3.6`. For instructions to install `Python 3.6` click [here](install_python_linux.md).
@@ -132,6 +129,8 @@ Content folder list:
     * train_functions_sgd.py: python code with additional functions to run the training code.
     * README.md: current redme file
     * install_python_linux.md: python 3.6 installation instructions.
+    * samples: sample images that the model has not seen during training. This images are for predicting the class.
+    * fake_samples: fake samples images of bacteria to predict the class. This images are to see how good the model has generalized.
 3. Unzip the data.zip file.
 data folder list:
     * train: images of the two clases to train del model (longitudinal division and other division).
@@ -142,18 +141,10 @@ Each folder contain two subfolders:
     * other_division: all other images of bacteria.
 
 ## Run a training for longitudinal division classification
-1. Run the jupyter notebook in a terminal:<br>
+Run the jupyter notebook in a terminal:<br>
 `jupyter notebook Longitudinl_classification.ipynb`
 
-
 **Notes: train_functions_sgd.py code contains all functions that are called in the main function. Do not remove or delete this file.**
-
-## Prediction example:
-1. with jupyter notebook in a terminal:<br>
-`jupyter notebook Longitudinl_classification.ipynb`<br>
-run the cell with the prediction example
-2. With docker:<br>
-`docker run -ti -v $PWD:/workspace/ longdiv_gpu python3.6 /workspace/predict_class.py`
 
 ## Contributing
 We thank Philipp M. Weber, from the University of Vienna for providing the microscopic images, and Gabriela F. Paredes for her comments and insights on the review of the manuscript.
