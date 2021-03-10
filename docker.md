@@ -8,6 +8,7 @@ Only for running the Docker image of the code.
 `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`<br>
 `sudo apt-get update`<br>
 `sudo apt-get install docker-ce docker-ce-cli containerd.io`
+
 * To install Docker in Windows 10 follow the steps [here](https://docs.docker.com/docker-for-windows/install/)
 * To install Docker in macOS follow the steps [here](https://docs.docker.com/docker-for-mac/install/)
 
