@@ -10,16 +10,19 @@ The project train a binary classifier to predict the type of division on bacteri
 * Docker (optional, https://docs.docker.com/get-docker/)
 * GPU
 
-## Quick to use (Docker Optional)
-These instructions will get you running a traning, testing and prediction of the current project.<br>
-The easiest way to run the project is trough a docker image. Follow the instructions [here](docker.md) to install Docker in your local machine.<br>
+## Ready to use (Docker Optional)
+These instructions will get you running a traning, testing and class prediction of the current project.<br>
+The easiest way to run the project is trough a Docker image. Follow the instructions [here](docker.md) to install Docker in your local machine.<br>
 
-* Download the image from Docker Hub. In a terminal copy and paste the following line:<br>
+* Download one time the image from Docker Hub. In a terminal copy and paste the following line:<br>
 `docker pull charlos1204/ldbc:gpu`
 
-* The only parameter to pass to the code is the text "current" or "model":
-   1. current: is the terminal were you are running docker and were the output will be saved.
-   2. model: internal folder were the trained model is. If you run a new training selection this folder the current trained model will be replace.
+* Run a training: The downloaded image contains the dataset to train and test a new model.<br>
+The following options for a training are:
+   1. Train a new model with the internal dataset:<br>
+`docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python train_model.py internal`
+   2. Train a new model with external dataset ([follow the instructions to create a dataset](create_training_dataset.dm)):
+longitudinal_division and other_division
 
 * Run a training and get the trained model from the docker image:<br>
 **$PWD** is the current directory (linux/macOS). For Windows replace with (include quotes):<br>
