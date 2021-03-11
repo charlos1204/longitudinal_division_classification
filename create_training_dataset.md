@@ -27,7 +27,7 @@ The structure of the folder should be like this:<br>
       <td colspan=2>longitudinal_division</td>
       <td colspan=2>other_division</td>
     </tr>
-      <td>![train_other1]<img src="train_other_1.jpg" alt=""></img> ![train_other2](train_other_2.jpg) ![train_other3](train_other_3.jpg)</td>
+      <td><img src="train_other_1.jpg" alt=""></img> <img src="train_other_2.jpg" alt=""></img> <img src="train_other_3.jpg" alt=""></img>
       <td>![val_other1](val_other_1.jpg) ![val_other2](val_other_2.jpg) ![val_other3](val_other_3.jpg)</td>
       <td>![test_other1](test_other_1.jpg) ![test_other2](test_other_2.jpg) ![test_other3](test_other_3.jpg)</td>
     <tr>
