@@ -16,6 +16,13 @@ The structure of the folder should be like this:<br>
       <th>data_folder</th>
     </tr>
   </thead>
+  <tbody>
+    <tr>
+      <td colspan=3>train</td>
+      <td colspan=3>val</td>
+      <td colspan=3>test</td>
+    </tr>
+  </tbody>
 </table>
 
 ------ | ------ | ------
