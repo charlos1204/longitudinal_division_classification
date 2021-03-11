@@ -10,7 +10,14 @@
 
 The structure of the folder should be like this:<br>
 
-data_folder
+<table>
+  <thead>
+    <tr>
+      <th>data_folder</th>
+    </tr>
+  </thead>
+</table>
+
 ------ | ------ | ------
 train | val | test
 ------ | ------ | ------
