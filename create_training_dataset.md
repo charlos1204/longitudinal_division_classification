@@ -7,3 +7,9 @@
 ![longitudinal1](longdiv_train_55.jpg) ![longitudinal2](longdiv_train_72.jpg)
 4. Inside of other_division folder place black and white bacteria images (jpg or png) with other type of division.<br>
 ![other1](other_1.jpg) ![other2](other_2.jpg)
+
+The structure of the folder should be like this:<br>
+
+|data_folder|
+-------------
+train|val|test
