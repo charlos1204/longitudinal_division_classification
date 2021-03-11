@@ -10,16 +10,16 @@
 
 The structure of the folder should be like this:<br>
 
-folder:
-	|- train
-         |- longitudinal_division
-         |- other_division
-    |- val
-         |- longitudinal_division
-         |- other_division
-    |- test 
-         |- longitudinal_division
-         |- other_division
+folder<br>
+	|- train<br>
+         |- longitudinal_division<br>
+         |- other_division<br>
+    |- val<br>
+         |- longitudinal_division<br>
+         |- other_division<br>
+    |- test<br>
+         |- longitudinal_division<br>
+         |- other_division<br>
 
 <table>
   <thead>
