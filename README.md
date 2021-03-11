@@ -17,16 +17,18 @@ The easiest way to run the project is trough a Docker image. Follow the instruct
 * Download one time the image from Docker Hub. In a terminal copy and paste the following line:<br>
 `docker pull charlos1204/ldbc:gpu`
 
-* Run a training: The downloaded image contains the dataset to train and test a new model. Copy and paste<br>
+* Run a training: The downloaded image contains the dataset to train and test a new model.<br>
 The options for a training are: train a model with internal dataset or train with your data.<br>
 **The new model will be safe as "trained_net_sgd_pre-25.pth" in "current_dir" which is where you are running the docker image.**<br>
 **$PWD** is the current directory (linux/macOS). For Windows replace with (include quotes) "C:\path_to_the_project_folder\"<br>
+Copy and paste.<br>
    1. Train a new model with the internal dataset:<br>
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python train_model.py internal`
    2. Train a new model with external dataset ([follow this instructions to create a new dataset folder](create_training_dataset.md)):
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python train_model.py external /current_dir/your_dataset_folder`
 
-* Run a test on the trained model: test the model on unseen data. Copy and paste<br>
+* Run a test on the trained model: test the model on unseen data.<br>
+  Copy and paste.<br>
    1. Test the internal model with the internal dataset:<br>
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python test_model.py internal_model`
    2. Test the internal model with a external dataset:<br>
@@ -36,7 +38,8 @@ The options for a training are: train a model with internal dataset or train wit
    4. Test the new model with a external dataset:<br>
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python test_model.py external_model /current_dir/trained_net_sgd_pre-25.pth /current_dir/your_dataset_folder`
 
-* Predict a class of bacteria division: Copy and paste<br>
+* Predict a class of bacteria division:<br>
+   Copy and paste.<br>
    1. Predict the class with the internal model on internal dataset of images:<br>
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python predict_class.py internal_model`
    2. Predict the class with the internal model on external dataset of images: create a new folder and add some bacteria images. Or use the samples folder from the current project by dowloding into the folder were you are running the docker image.
@@ -45,18 +48,6 @@ The options for a training are: train a model with internal dataset or train wit
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python predict_class.py external_model /current_dir/trained_net_sgd_pre-25.pth`
    4. Predict the class with the new model on external dataset of images:<br>
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python predict_class.py external_model /current_dir/trained_net_sgd_pre-25.pth /current_dir/samples`
-
-There is a possibility to enter into a bash mode and modify the code inside to play with it. However, once you quit the bash all modifications will be lost. Therefore, we recommend to use the jupyter notebook to keep all modifications.
-
-Run image in bash mode.<br>
-`docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu bash`<br>
-With this option you will get a shell terminal where you can run the training, testing or predicting. The code is inside of workspace dictory. **$PWD** is the current directory.<br>
-* Running a training with parameter model:<br>
-`python train_model.py model`
-* Running a test with parameter model:<br>
-`python test_model.py model`
-* Running a prediction with parameter model:<br>
-`python predict_class.py model`
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for testing purposes.
