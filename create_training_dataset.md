@@ -28,8 +28,8 @@ The structure of the folder should be like this:<br>
       <td colspan=2>other_division</td>
     </tr>
       <td colspan=2><img src="train_other_1.jpg" alt=""></img> <img src="train_other_2.jpg" alt=""></img> <img src="train_other_3.jpg" alt=""></img>
-      <td colspan=2><img src="val_other_1.jpg" alt=""></img> <img src="val_other_1.jpg" alt=""></img> <img src="val_other_3.jpg" alt=""></img>
-      <td colspan=2><img src="test_other_1.jpg" alt=""></img> <img src="test_other_1.jpg" alt=""></img> <img src="test_other_1.jpg" alt=""></img>
+      <td colspan=4><img src="val_other_1.jpg" alt=""></img> <img src="val_other_2.jpg" alt=""></img> <img src="val_other_3.jpg" alt=""></img>
+      <td colspan=4><img src="test_other_1.jpg" alt=""></img> <img src="test_other_2.jpg" alt=""></img> <img src="test_other_3.jpg" alt=""></img>
     <tr>
     </tr>
   </tbody>
