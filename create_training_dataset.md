@@ -10,6 +10,8 @@
 
 The structure of the folder should be like this:<br>
 
-|data_folder|
--------------
-train|val|test
+data_folder
+------ | ------ | ------
+train | val | test
+------ | ------ | ------
+longitudinal_division | other_division | longitudinal_division | other_division | longitudinal_division | other_division 
