@@ -12,14 +12,14 @@ The structure of the folder should be like this:<br>
 
 folder<br>
     |- train<br>
-         |- longitudinal_division<br>
-         |- other_division<br>
+    |    |- longitudinal_division<br>
+    |    |- other_division<br>
     |- val<br>
-         |- longitudinal_division<br>
-         |- other_division<br>
+    |    |- longitudinal_division<br>
+    |    |- other_division<br>
     |- test<br>
-         |- longitudinal_division<br>
-         |- other_division<br>
+    |    |- longitudinal_division<br>
+    |    |- other_division<br>
 
 <table>
   <thead>
