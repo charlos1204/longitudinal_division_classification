@@ -13,19 +13,19 @@ The structure of the folder should be like this:<br>
 <table>
   <thead>
     <tr>
-      <th>data_folder</th>
+      <th colspan=4>train</th>
+      <th colspan=4>val</th>
+      <th colspan=4>test</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan=3>train</td>
-      <td colspan=3>val</td>
-      <td colspan=3>test</td>
+      <td colspan=2>longitudinal_division</td>
+      <td colspan=2>other_division</td>
+      <td colspan=2>longitudinal_division</td>
+      <td colspan=2>other_division</td>
+      <td colspan=2>longitudinal_division</td>
+      <td colspan=2>other_division</td>
     </tr>
   </tbody>
 </table>
-
------- | ------ | ------
-train | val | test
------- | ------ | ------
-longitudinal_division | other_division | longitudinal_division | other_division | longitudinal_division | other_division 
