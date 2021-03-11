@@ -21,7 +21,7 @@ The easiest way to run the project is trough a Docker image. Follow the instruct
 The following options for a training are:
    1. Train a new model with the internal dataset:<br>
 `docker run -ti -v $PWD:/current_dir/ charlos1204/ldbc:gpu python train_model.py internal`
-   2. Train a new model with external dataset ([follow the instructions to create a dataset](create_training_dataset.dm)):
+   2. Train a new model with external dataset ([follow the instructions to create a dataset](create_training_dataset.md)):
 
 
 * Run a training and get the trained model from the docker image:<br>
