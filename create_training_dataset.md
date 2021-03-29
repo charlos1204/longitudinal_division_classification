@@ -1,6 +1,8 @@
 # Create a training dataset
 
-Raw images. Starting with a microscopic image:
+## Raw images. 
+
+### Starting with a microscopic image:
 1. Transform the image into a black and white image. The most common tools are Photoshop, Gimp or a script wrote by you.
 2. Cut bacteria from the black and white image and save into single files (jpg or PNG). This process can be manual or automatized.
 3. Place the cut black and white images into two folders longitudinal_division and other_division.
@@ -11,7 +13,7 @@ Raw images. Starting with a microscopic image:
 to<br>
 `model_ft.fc = nn.Linear(num_ftrs, number_of_classes)` <br>
 
-## Dataset spliting:
+### Dataset spliting:
 1. The common way of spliting is 20% of the images are for testing, then 80% and 20% for traninig and validation with the remaining images.
 2. Create a folder that will contain the three following folders: train, val and test
 3. Inside of each folder (train, val and test) create two folders: longitudinal_division and other_division
