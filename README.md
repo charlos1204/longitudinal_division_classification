@@ -11,7 +11,8 @@ The project train a binary classifier to predict the type of division on bacteri
 * GPU
 
 ## Dataset Description.
-The dataset is a collection of phase contrast microscopic images showing bacteria with a variety of shapes. The microscopic images are from the Thiosymbion species. More details about the images can be found in [Weber et al. 2019](https://doi.org/10.1016/j.cub.2019.07.064), [Leisch et al. 2016](https://doi.org/10.1038/nmicrobiol.2016.182) and [Pende et al. 2014](https://doi.org/10.1038/ncomms5803). Instructions to create a dataset from microscopic images can be found [here](create_training_dataset.md)
+The dataset is a collection of phase contrast microscopic images showing bacteria with a variety of shapes. The microscopic images are from the Thiosymbion species. More details about the images can be found in [Weber et al. 2019](https://doi.org/10.1016/j.cub.2019.07.064), [Leisch et al. 2016](https://doi.org/10.1038/nmicrobiol.2016.182) and [Pende et al. 2014](https://doi.org/10.1038/ncomms5803).<br>
+**NOTE:** Instructions to create a dataset from microscopic images can be found [here](create_training_dataset.md)
 
 ## Ready to use (Docker Optional)
 These instructions will get you running a traning, testing and class prediction of the current project.<br>
