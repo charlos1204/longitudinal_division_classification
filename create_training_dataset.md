@@ -8,7 +8,7 @@
 3. Place the cut black and white images into two folders longitudinal_division and other_division.
 4. Repeat the previous steps with the rest of the microscopic images.
 
-**NOTE:** The current model is trained as binary classfier if you want to add more clases, add the folders you need then you must change the code from binary to multiclass classifier. to change a multiclass modify the following line in the notebook from:<br>
+**NOTE:** The current model is trained as binary classfier. If you want to add more clases add the folders you need then you must change the code from binary to multiclass classifier. to change a multiclass modify the following line in the notebook from:<br>
 `model_ft.fc = nn.Linear(num_ftrs, 2)` <br>
 to<br>
 `model_ft.fc = nn.Linear(num_ftrs, number_of_classes)` <br>
